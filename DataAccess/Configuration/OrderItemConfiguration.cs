@@ -2,28 +2,27 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccess.Configuration
+namespace DataAccess.Configuration;
+
+public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
 {
-    public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
+    public void Configure(EntityTypeBuilder<OrderItem> builder)
     {
-        public void Configure(EntityTypeBuilder<OrderItem> builder)
-        {
-            //Primary Key
-            builder.HasKey(o => o.Id);
-            builder.Property(o => o.Id).ValueGeneratedOnAdd();
+        //Primary Key
+        builder.HasKey(o => o.Id);
+        builder.Property(o => o.Id).ValueGeneratedOnAdd();
 
-            // Properties
-            builder.Property(o => o.Quantity).IsRequired();
-            
+        // Properties
+        builder.Property(o => o.Quantity).IsRequired();
+        
 
-            builder.HasOne(o => o.Order)
-                .WithMany(n => n.OrderItems)
-                .HasForeignKey(o => o.OrderId);
+        builder.HasOne(o => o.Order)
+            .WithMany(n => n.OrderItems)
+            .HasForeignKey(o => o.OrderId);
 
 
-            builder.HasOne(o => o.Product)
-                  .WithMany(n => n.OrderItems)
-                  .HasForeignKey(o => o.ProductId);
-        }
+        builder.HasOne(o => o.Product)
+              .WithMany(n => n.OrderItems)
+              .HasForeignKey(o => o.ProductId);
     }
 }

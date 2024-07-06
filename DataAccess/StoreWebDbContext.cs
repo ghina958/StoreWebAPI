@@ -1,12 +1,14 @@
 ﻿using Domain;
+using Domain.Accounts;
+using Domain.Store;
 using Microsoft.EntityFrameworkCore;
 using SmartEnum.EFCore;
 
 namespace DataAccess
 {
-    public class ApplicationDbContext : DbContext
+    public class StoreWebDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public StoreWebDbContext(DbContextOptions<StoreWebDbContext> options) : base(options)
         {
         }
 

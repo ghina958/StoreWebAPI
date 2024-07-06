@@ -14,7 +14,7 @@ namespace Domain
         public int? ImageID { get; set; }
         public int Price { get; set; }
         public int StoreId { get; set; }
-        public Store Store { get; set; }
+        public Domain.Store.Store Store { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; }
     }
 }
