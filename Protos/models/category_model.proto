@@ -1,0 +1,33 @@
+syntax = "proto3";
+option csharp_namespace = "StoreWebAPI.Application.Category";
+package store_webAPI;
+
+message NewCategoryRequest {
+	string name=1;	
+}
+
+message CategoryData{
+	int32  id =1;
+	string name=2;	
+	string created_at = 3;	
+}
+message EditCategoryRequest {
+	int32  id =1;
+	string name=2;	
+}
+message DeleteCategoryRequest{
+	int32  id =1;
+}
+message DeleteCategoryResponse{
+	bool   success = 1;
+    string message = 2;
+}
+message ListCategoriesRequest{
+	google.protobuf.StringValue  name=1 ;		
+}
+message ListCategoriesResponse{
+	repeated CategoryData Category =1;
+}
+message getCategoryDataByIdRequest {
+	int32  id =1;	
+}

@@ -9,7 +9,6 @@ namespace Domain.Store
         public string Address { get; set; }
         public File? Image { get; set; }
         public int? ImageID { get; set; }
-
         public List<WorkingHours> WorkingHours { get; set; } = new List<WorkingHours>();
         public int CategoryId { get; set; }
         public Category Category { get; set; }

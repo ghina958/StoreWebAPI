@@ -1,0 +1,16 @@
+syntax = "proto3";
+option csharp_namespace = "StoreWebAPI.WebAPI.Services";
+import "models/category_model.proto";
+package store_webAPI;
+
+service Categories {
+
+	rpc Create(NewCategoryRequest) returns(CategoryData);
+	rpc GetById(getCategoryDataByIdRequest) returns(CategoryData);
+	rpc Edit(EditCategoryRequest) returns(CategoryData);
+	rpc Delete(DeleteCategoryRequest) returns(DeleteCategoryResponse);
+
+	rpc ListAll(ListCategoriesRequest) returns(ListCategoriesResponse);
+	
+	
+}
