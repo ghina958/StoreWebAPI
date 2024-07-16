@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Domain.Store
+namespace Domain.TheStore
 {
     [Owned]
     public class WorkingHours

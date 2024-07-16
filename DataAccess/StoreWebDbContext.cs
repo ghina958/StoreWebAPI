@@ -1,8 +1,7 @@
 ﻿using Domain;
 using Domain.Accounts;
-using Domain.Store;
+using Domain.TheStore;
 using Microsoft.EntityFrameworkCore;
-using SmartEnum.EFCore;
 
 namespace DataAccess
 {
@@ -14,7 +13,7 @@ namespace DataAccess
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
         {
-            configurationBuilder.ConfigureSmartEnum();
+           
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Domain.File> Files { get; set; }

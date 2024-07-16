@@ -7,7 +7,7 @@ namespace Domain
         public string Name { get; set; }
         public File? Image { get; set; }
         public int? ImageID { get; set; }
-        public ICollection<Domain.Store.Store> Stores { get; set; }
+        public ICollection<TheStore.Store> Stores { get; set; }
 
     }
 }

@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 using System.Text.Json;
-using Domain.Store;
+using Domain.TheStore;
 
 namespace DataAccess.Configuration;
 

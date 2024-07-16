@@ -1,10 +1,8 @@
-﻿using Ardalis.SmartEnum;
+﻿
+namespace Domain.Enums;
 
-namespace Domain.Enums
+public enum Role
 {
-    public enum Role
-    {
-        Admin = 1,
-        Customer = 2,    
-    }
+    Admin = 1,
+    Customer = 2,    
 }

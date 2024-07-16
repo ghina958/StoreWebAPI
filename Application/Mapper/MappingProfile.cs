@@ -1,12 +1,20 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain;
+using StoreWebAPI.Application.Category;
 
 namespace Application.Mapper;
 
 public class MappingProfile : Profile
 {
+    public MappingProfile()
+    {
+        CreateMap<NewCategoryRequest, Category>();
+        CreateMap<Category, NewCategoryResponse>();
+
+
+    }
+
+
+
+
 }

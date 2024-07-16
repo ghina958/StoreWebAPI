@@ -1,7 +1,6 @@
 ﻿using Domain.Abstract;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Domain.Store
+namespace Domain.TheStore
 {
     public class Store : BaseEntity<int>
     {

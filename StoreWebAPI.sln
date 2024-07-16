@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csp
 	ProjectSection(ProjectDependencies) = postProject
 		{3EE19D90-0F27-43C8-8AD2-620A7DABB5DC} = {3EE19D90-0F27-43C8-8AD2-620A7DABB5DC}
 		{A4AC690F-0090-4C6C-BA0F-5150F662C2F5} = {A4AC690F-0090-4C6C-BA0F-5150F662C2F5}
+		{C1865597-5B77-4395-831D-5CBD5D233573} = {C1865597-5B77-4395-831D-5CBD5D233573}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{3EE19D90-0F27-43C8-8AD2-620A7DABB5DC}"
@@ -15,14 +16,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{A4AC690F-0090-4C6C-BA0F-5150F662C2F5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protos", "Protos", "{CF36EBAB-DD6F-432E-99B5-FD5B4CF1835D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{87E5E9C3-6636-4114-97B6-9E8CF111E525}"
 	ProjectSection(SolutionItems) = preProject
-		Protos\category_service.proto = Protos\category_service.proto
+		protos\category_servies.proto = protos\category_servies.proto
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "models", "models", "{562F9AC2-D750-4D77-B3A4-D69CFBBC74EE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "models", "models", "{17EB8493-DEDF-4555-B546-84DEC17E56FB}"
 	ProjectSection(SolutionItems) = preProject
-		Protos\models\category_model.proto = Protos\models\category_model.proto
+		protos\models\category_model.proto = protos\models\category_model.proto
 	EndProjectSection
 EndProject
 Global
@@ -52,7 +53,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{562F9AC2-D750-4D77-B3A4-D69CFBBC74EE} = {CF36EBAB-DD6F-432E-99B5-FD5B4CF1835D}
+		{17EB8493-DEDF-4555-B546-84DEC17E56FB} = {87E5E9C3-6636-4114-97B6-9E8CF111E525}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED8DCFB0-1A6D-486C-B4A8-4A1DC96EC79C}
