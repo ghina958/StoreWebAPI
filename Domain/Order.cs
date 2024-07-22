@@ -1,4 +1,5 @@
 ﻿using Domain.Abstract;
+using Domain.Accounts;
 using Domain.Enums;
 
 namespace Domain

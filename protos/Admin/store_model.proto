@@ -1,0 +1,69 @@
+syntax = "proto3";
+option csharp_namespace = "StoreWebAPI.Application.Store";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "Admin/category_model.proto";
+package store;
+
+message NewStoreRequest {
+	string name = 1;
+    string address = 2;
+    repeated WorkingHours workingHours = 3;
+    int32 category_id = 4;
+}
+
+message NewStoreResponse{
+	int32  id =1;
+	string name = 2;
+    string address = 3;
+    repeated WorkingHours workingHours = 4;
+    int32 category_id = 5;	
+}
+message GetByIdStoreRequest{
+	int32  id =1;
+}
+message GetByIdStoreResponse{
+	int32  id =1;
+    string address = 2;
+    repeated WorkingHours workingHours = 3;
+    NewCategoryResponse category_id = 4;
+}
+message EditStoreRequest{
+    int32  id =1;
+	string name = 2;
+    string address = 3;
+    WorkingHours workingHours = 4;
+    int32 category_id = 5;	
+}
+
+message DeleteStoreRequest{
+	int32  id =1;
+}
+message DeleteStoreResponse{
+	bool   success = 1;
+    string message = 2;
+}
+
+message GetAllStoresRequest{
+	google.protobuf.StringValue  name=1 ;
+	google.protobuf.Int32Value  category_id=2 ;
+}
+message GetAllStoresResponse{
+	repeated GetByIdStoreResponse Store =1;
+}
+
+message WorkingHours {
+    DayOfWeek day = 1;
+    google.protobuf.Timestamp openingTime = 2;
+    google.protobuf.Timestamp closingTime = 3;
+}
+
+enum DayOfWeek {
+    SUNDAY = 0;
+    MONDAY = 1;
+    TUESDAY = 2;
+    WEDNESDAY = 3;
+    THURSDAY = 4;
+    FRIDAY = 5;
+    SATURDAY = 6;
+}

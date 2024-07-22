@@ -3,28 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{AFB0414A-AD21-4C13-B5EF-BD7CB7176238}"
-	ProjectSection(ProjectDependencies) = postProject
-		{3EE19D90-0F27-43C8-8AD2-620A7DABB5DC} = {3EE19D90-0F27-43C8-8AD2-620A7DABB5DC}
-		{A4AC690F-0090-4C6C-BA0F-5150F662C2F5} = {A4AC690F-0090-4C6C-BA0F-5150F662C2F5}
-		{C1865597-5B77-4395-831D-5CBD5D233573} = {C1865597-5B77-4395-831D-5CBD5D233573}
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{3EE19D90-0F27-43C8-8AD2-620A7DABB5DC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{C1865597-5B77-4395-831D-5CBD5D233573}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{A4AC690F-0090-4C6C-BA0F-5150F662C2F5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{87E5E9C3-6636-4114-97B6-9E8CF111E525}"
 	ProjectSection(SolutionItems) = preProject
-		protos\category_servies.proto = protos\category_servies.proto
+		protos\category_service.proto = protos\category_service.proto
+		protos\order_service.proto = protos\order_service.proto
+		protos\product_service.proto = protos\product_service.proto
+		protos\store_service.proto = protos\store_service.proto
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "models", "models", "{17EB8493-DEDF-4555-B546-84DEC17E56FB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{17EB8493-DEDF-4555-B546-84DEC17E56FB}"
 	ProjectSection(SolutionItems) = preProject
-		protos\models\category_model.proto = protos\models\category_model.proto
+		protos\Admin\category_model.proto = protos\Admin\category_model.proto
+		protos\Admin\product_model.proto = protos\Admin\product_model.proto
+		protos\Admin\store_model.proto = protos\Admin\store_model.proto
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{AE1BF55B-2DEF-472B-B49C-A5D2FBEAAD86}"
+	ProjectSection(SolutionItems) = preProject
+		protos\Mobile\order_model.proto = protos\Mobile\order_model.proto
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{22D05FAF-B1FC-4A61-95F4-AE31A83BC548}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{23D2B7DE-65E1-4BA3-82F0-976C207F419A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +37,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AFB0414A-AD21-4C13-B5EF-BD7CB7176238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFB0414A-AD21-4C13-B5EF-BD7CB7176238}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFB0414A-AD21-4C13-B5EF-BD7CB7176238}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFB0414A-AD21-4C13-B5EF-BD7CB7176238}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3EE19D90-0F27-43C8-8AD2-620A7DABB5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3EE19D90-0F27-43C8-8AD2-620A7DABB5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EE19D90-0F27-43C8-8AD2-620A7DABB5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,16 +45,21 @@ Global
 		{C1865597-5B77-4395-831D-5CBD5D233573}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1865597-5B77-4395-831D-5CBD5D233573}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1865597-5B77-4395-831D-5CBD5D233573}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A4AC690F-0090-4C6C-BA0F-5150F662C2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4AC690F-0090-4C6C-BA0F-5150F662C2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4AC690F-0090-4C6C-BA0F-5150F662C2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4AC690F-0090-4C6C-BA0F-5150F662C2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D05FAF-B1FC-4A61-95F4-AE31A83BC548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D05FAF-B1FC-4A61-95F4-AE31A83BC548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D05FAF-B1FC-4A61-95F4-AE31A83BC548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D05FAF-B1FC-4A61-95F4-AE31A83BC548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D2B7DE-65E1-4BA3-82F0-976C207F419A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D2B7DE-65E1-4BA3-82F0-976C207F419A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D2B7DE-65E1-4BA3-82F0-976C207F419A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D2B7DE-65E1-4BA3-82F0-976C207F419A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{17EB8493-DEDF-4555-B546-84DEC17E56FB} = {87E5E9C3-6636-4114-97B6-9E8CF111E525}
+		{AE1BF55B-2DEF-472B-B49C-A5D2FBEAAD86} = {87E5E9C3-6636-4114-97B6-9E8CF111E525}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED8DCFB0-1A6D-486C-B4A8-4A1DC96EC79C}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+option csharp_namespace = "StoreWebAPI.Services";
+import "Admin/store_model.proto";
+package store;
+
+service Stores {
+
+	rpc Create(NewStoreRequest) returns(NewStoreResponse);
+	rpc GetById(GetByIdStoreRequest) returns(GetByIdStoreResponse);	
+	rpc Edit(EditStoreRequest) returns(NewStoreResponse);
+	rpc Delete(DeleteStoreRequest) returns(DeleteStoreResponse);
+	rpc GetAll(GetAllStoresRequest) returns(GetAllStoresResponse);
+	
+}

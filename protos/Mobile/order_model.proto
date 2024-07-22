@@ -1,0 +1,41 @@
+syntax = "proto3";
+option csharp_namespace = "StoreWebAPI.Application.Order";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+package store;
+
+message NewOrderRequest {
+	int32  no =1;
+	google.protobuf.Timestamp date = 2;
+    OrderStatus order_status =3;
+    int32 customer_id = 4;
+}
+
+message EditOrderRequest {
+	int32 id =1;
+	int32  no =2;
+	google.protobuf.Timestamp date = 3;
+    OrderStatus order_status =4;
+    int32 customer_id = 5;
+}
+message NewOrderResponse {
+    int32 id =1;
+	int32  no =2;
+	google.protobuf.Timestamp date = 3;
+    OrderStatus order_status =4;
+    int32 customer_id = 5;
+    string created_at = 6;
+}
+message GetOrderByIdRequest {
+	 int32 id =1;
+}
+
+enum OrderStatus
+    {
+        Cart = 0;
+        Submitted = 1;
+        Paid = 2;
+        AwaitingPickUp = 3;
+        Shipping = 4;
+        Delivered = 5;
+    }

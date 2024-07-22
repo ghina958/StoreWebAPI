@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using DataAccess;
-using Application.Mapper;
 using MediatR;
 using StoreWebAPI.Application.Category;
 using StoreWebAPI.Services;
+using Application.Mapper;
+using StoreWebAPI.Application.Product;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,7 @@ builder.Services.AddDbContext<StoreWebDbContext>(options =>
 
 builder.Services.AddGrpc();
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
-builder.Services.AddMediatR(typeof(NewCategoryRequest).Assembly);
+builder.Services.AddMediatR(typeof(NewProductRequest).Assembly);
 
 
 
@@ -29,6 +30,10 @@ app.UseAuthentication();
 app.UseGrpcWeb(new GrpcWebOptions() { DefaultEnabled = true });
 
 app.MapGrpcService<CategoryService>();
+app.MapGrpcService<ProductService>();
+app.MapGrpcService<OrderService>();
+app.MapGrpcService<StoreService>();
+
 app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 
 app.Run();

@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-	  <RootNamespace>StoreWebAPI</RootNamespace>
 	  <Nullable>enable</Nullable>
 	  <ImplicitUsings>enable</ImplicitUsings>
    
@@ -31,15 +30,29 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<Protobuf Include="..\protos\models\category_model.proto" GrpcServices="Server" />
-		<Protobuf Include="..\protos\category_servies.proto" GrpcServices="Server" />
+		<Protobuf Include="..\protos\*_service.proto">
+			<GrpcServices>Server</GrpcServices>
+			<Access>Internal</Access>
+			<ProtoCompile>True</ProtoCompile>
+			<ProtoRoot>..\protos\</ProtoRoot>
+			<CompileOutputs>True</CompileOutputs>
+			<OutputDir>obj\Debug\net7.0\</OutputDir>
+			<Generator>MSBuild:Compile</Generator>
+		</Protobuf>
 	</ItemGroup>
 
 
 	<ItemGroup>
+		<ProjectReference Include="..\Application\Application.csproj" />
 		<ProjectReference Include="..\DataAccess\DataAccess.csproj" />
 		<ProjectReference Include="..\Domain\Domain.csproj" />
-		<ProjectReference Include="..\Application\Application.csproj" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Compile Update="Program.cs">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

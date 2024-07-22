@@ -1,0 +1,13 @@
+syntax = "proto3";
+option csharp_namespace = "StoreWebAPI.Services";
+import "Mobile/order_model.proto";
+package store;
+
+service Orders {
+
+	rpc Create(NewOrderRequest) returns(NewOrderResponse);
+	rpc Edit(EditOrderRequest) returns(NewOrderResponse);
+	rpc GetById(GetOrderByIdRequest) returns(NewOrderResponse);	
+	
+	
+}
