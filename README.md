@@ -18,3 +18,22 @@ DataAccess : Handles data access and integration with external services.
 Application : Implement application services and use cases.
 
 Services : Include various application services. 
+
+## Technologies Used
+PostgreSQL: Used as the database for storing application data.
+
+Entity Framework Core: Used for interacting with the PostgreSQL database, providing ORM capabilities.
+
+Microsoft.EntityFrameworkCore , Version : 7.0.0
+
+Microsoft.EntityFrameworkCore.Tools
+
+MediatR: Used to implement the Mediator pattern, enabling clean separation between different components of the application.
+
+AutoMapper: Used for mapping between domain models and data transfer objects (DTOs).
+
+gRPC: Used for communication between services, with support for Protocol Buffers.
+
+Google.Protobuf
+
+Grpc.Core.Api
