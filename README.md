@@ -4,10 +4,16 @@
 ## Features
 
 #### CQRS PATTERNS
-
 #### Mediator Pattern
-
 #### SOLID Principle
+#### CQRS and MediatR
+#### Mediator Pattern
+#### SOLID PRİNCİPLE
+#### gRPC Communication
+#### AutoMapper
+#### Entity Management
+#### PostgreSQL Integration
+#### Domain-Driven Design (DDD)
 
 ## Project Structure 
 Protos : Contains .proto files that define the request and response messages for gRPC services.
