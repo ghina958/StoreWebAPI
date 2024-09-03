@@ -1,8 +1,8 @@
-# StoreWebAPI Project Using Clean Architecture Principle,It Built to be scalable maintainable.
+# StoreWebAPI İs Project by ASP.NET Web API, Using Clean Architecture Principle,It Built to be scalable maintainable.
 ## protobuf-net.Grpc adds code-first support for services over gRPC using either the native Grpc.Core API, fully-managed Grpc.Net.Client / Grpc.AspNetCore.Server API.
 
 ## Features
-
+#### ASP.NET Web API
 #### CQRS PATTERNS
 #### Mediator Pattern
 #### SOLID Principle
